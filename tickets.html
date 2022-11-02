@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comprar tickets</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script>
+      function calcTotal () {
+        valor = document.getElementById('cantInput').value;
+        valor = parseInt(valor);
+        total = 0;
+        total = valor * 200;
+        document.getElementById('cantTotal').innerHTML = total;
+        }
+        
+
+    </script>
+  </head>
+<body>
+
+  <section class="barra">
+    <nav class="navbar bg-dark">
+      <div class="img-codoacodo">
+        <div class="container-fluid">
+        <a class="navbar-brand text-center text-light" href="index.html">
+          Conf Bs As 
+        </a>
+        </div>
+      </div>
+
+    <div class="container-barra-rigth ">
+      <div class="container-fluid bg-dark navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link  text-secondary" aria-current="page" href="#img-palacio">La conferencia</a>
+            <a class="nav-link text-secondary" href="#oradores-t">Los oradores</a>
+            <a class="nav-link text-secondary" href="#lugaryfecha">El lugar y la fecha</a>
+            <a class="nav-link active text-light" href="#conviertete">Conviértete en orador</a>
+            <a class="nav-link text-success"  href="tickets.html">Comprar tickets</a>
+          </div>
+        </div>
+      </div>         
+  </section>
+<br>
+
+  <section id="descuento">
+   <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <div id="estudiante" class="col">
+        <div class="card border border-primary">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Estudiante</h5>
+            <p class="card-text">Tienen un descuento</p>
+            <p class="card-text fw-bold">80%</p>
+            <small class="text-muted">*presentar documentación</small>
+          </div>
+        </div>
+        </div>
+      </div>
+      
+
+      <div id="trainee" class="col">
+        <div class="card border border-info">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Trainee</h5>
+            <p class="card-text">Tienen un descuento</p>
+            <p class="card-text fw-bold">50%</p>
+            <small class="text-muted">*presentar documentación</small>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div id="junior" class="col">
+          <div class="card border border-warning ">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Junior</h5>
+              <p class="card-text">Tienen un descuento</p>
+              <p class="card-text fw-bold">15%</p>
+              <small class="text-muted">*presentar documentación</small>
+            </div>
+          </div>
+          </div>
+      </div>
+
+      </div>
+
+   </section>
+
+      <div class="title text-center"> 
+        <h id="conv">VENTA </h>
+        <h2>VALOR DE TICKET $200</h2>
+      </div>
+    
+   <section id="form1"> 
+      <div class="row">
+        <form> 
+          <div class="col d-flex align-items-center mb-3">
+          <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+          <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+          </div>
+
+        <div class= "col d-flex align-items-center mb-3">
+        <input type="email" id="emailinput" class="form-control" placeholder="Correo" aria-label="Last name">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col d-flex align-items-center mb-4">
+          <div class="me-auto">
+            <label for="cantInput" class="form-label">Cantidad</label>
+            <input type="number" min="1" class="form-control"  id="cantInput" value="1" >
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="inputPassword5" class="form-label">Categoria</label>
+           <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+            <select class="form-select" id="specificSizeSelect">
+              <option selected>Elegir una opción</option>
+             <option value="1">Estudiante</option>
+              <option value="2">Trainee</option>
+              <option value="3">Junior</option>  
+            </select>  
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col md-12 align-items-center mb-3">
+          <div id="cantTotal" class="alert alert-primary" role="alert">Total a Pagar: $ </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="d-grid gap-2 d-md-block">
+          <button type="reset" class="btn btn-success mb-3">Borrar</button>
+          <button type="button" class="btn btn-primary mb-3" onclick="calcTotal()">Resumen</button>
+        </div>
+      </div>
+      </section>
+      </div>
+
+
+        </form>
+      </section>
+            
+                     
+
+
+
+
+     
+
+
+
+
+
+
+
+      
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
+
+
+    
+</body>
+</html>
