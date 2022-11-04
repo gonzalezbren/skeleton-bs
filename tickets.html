@@ -8,15 +8,27 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script>
-      function calcTotal () {
-        valor = document.getElementById('cantInput').value;
-        valor = parseInt(valor);
+      function calcTotal() {
+        cant = document.getElementById('cantInput').value;
+        cant = parseInt(cant);
         total = 0;
-        total = valor * 200;
-        document.getElementById('cantTotal').innerHTML = total;
-        }
+        total = cant * 200;
+        categoria = document.getElementById('categ').value;
         
-
+        if(categoria == 1) {
+          total = total-(total*80/100) ;
+        };
+        if(categoria == 2) {
+          total = total-(total*50/100);
+        };
+        if(categoria == 3) {
+          total = total-(total*15/100);
+        };
+        document.getElementById('cantTotal').innerHTML ="Total a Pagar: " + total + " $";
+      }
+      function clearForm() {
+        document.getElementById('cantTotal').innerHTML = "Total a Pagar: $";
+      }
     </script>
   </head>
 <body>
@@ -115,9 +127,9 @@
       </div>
 
       <div class="row">
-        <div class="col d-flex align-items-center mb-4">
+        <div  class="col d-flex align-items-center mb-4">
           <div class="me-auto">
-            <label for="cantInput" class="form-label">Cantidad</label>
+            <label  for="cantInput" class="form-label">Cantidad</label>
             <input type="number" min="1" class="form-control"  id="cantInput" value="1" >
           </div>
         </div>
@@ -125,7 +137,7 @@
         <div class="col-sm-6">
           <label for="inputPassword5" class="form-label">Categoria</label>
            <label class="visually-hidden" for="specificSizeSelect">Preference</label>
-            <select class="form-select" id="specificSizeSelect">
+            <select  id="categ" class="form-select" id="specificSizeSelect">
               <option selected>Elegir una opción</option>
              <option value="1">Estudiante</option>
               <option value="2">Trainee</option>
@@ -138,18 +150,45 @@
         <div class="col md-12 align-items-center mb-3">
           <div id="cantTotal" class="alert alert-primary" role="alert">Total a Pagar: $ </div>
         </div>
-      </div>
-      <div class="row">
         <div class="d-grid gap-2 d-md-block">
-          <button type="reset" class="btn btn-success mb-3">Borrar</button>
-          <button type="button" class="btn btn-primary mb-3" onclick="calcTotal()">Resumen</button>
+          <button type="reset" id=btnborrar class="btn  text-light  "   onclick="clearForm()" >Borrar</button>
+          <button type="button" id= btnresumen class="btn text-light" onclick="calcTotal()">Resumen</button>
         </div>
+      </div>
       </div>
       </section>
       </div>
-
+<br>
 
         </form>
+      </section>
+
+      <section id="footer"> 
+        <div class="container"> 
+          <div class="row ">
+            <div class="col d-flex align-items-center ">
+              <a class="nav-link text-light" href="#"> Preguntas <br> frecuentes</a>
+            </div>
+            <div class="col d-flex align-items-center">
+              <a class="nav-link text-light " href="#">Contáctanos</a>
+            </div>
+            <div class="col d-flex align-items-center">
+              <a class="nav-link text-light" href="#">Prensa</a>
+            </div>
+            <div class="col d-flex align-items-center">
+              <a class="nav-link text-light" href="#">Conferenias</a>
+            </div>
+            <div class="col d-flex align-items-center">
+              <a class="nav-link text-light" href="#">Términos y<br> condiciones</a>
+            </div>
+            <div class="col d-flex align-items-center">
+              <a class="nav-link text-light" href="#">Privacidad</a>
+            </div>
+            <div class="col d-flex align-items-center">
+              <a class="nav-link text-light" href="#">Estudiantes</a>
+            </div>
+          </div>
+        </div>
       </section>
             
                      
