@@ -84,3 +84,42 @@
     text-align: center;
 }
 
+#descuento {
+    margin-left: 10%;
+    margin-right: 0%;
+}
+
+
+
+#estudiante {
+    padding-inline-start: 12%;
+    margin-right: -5%;
+}
+
+#trainee {
+    padding-inline-start: 12%;
+    margin-left: -5%;
+}
+
+#junior {
+    padding-inline-start: 12%;
+    margin-left: -10%;
+}
+
+#form1 {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#btnborrar {
+    background-color: #96c93e;
+    width:50%
+
+}
+
+#btnresumen {
+    background-color: #96c93e;
+    width:49%
+
+}
+
