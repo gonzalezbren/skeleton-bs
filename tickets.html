@@ -24,7 +24,7 @@
         if(categoria == 3) {
           total = total-(total*15/100);
         };
-        document.getElementById('cantTotal').innerHTML ="Total a Pagar: " + total + " $";
+        document.getElementById('cantTotal').innerHTML ="Total a Pagar: $ " + total;
       }
       function clearForm() {
         document.getElementById('cantTotal').innerHTML = "Total a Pagar: $";
@@ -117,7 +117,7 @@
       <div class="row">
         <form> 
           <div class="col d-flex align-items-center mb-3">
-          <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+          <input type="text" id=texnom class="form-control" placeholder="Nombre" aria-label="First name">
           <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
           </div>
 
@@ -127,7 +127,7 @@
       </div>
 
       <div class="row">
-        <div  class="col d-flex align-items-center mb-4">
+        <div  class="col-sm-6 mb-4">
           <div class="me-auto">
             <label  for="cantInput" class="form-label">Cantidad</label>
             <input type="number" min="1" class="form-control"  id="cantInput" value="1" >
